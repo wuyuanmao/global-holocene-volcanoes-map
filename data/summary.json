@@ -1,0 +1,51 @@
+{
+  "total": 1215,
+  "countries": 88,
+  "recent": 438,
+  "highest": {
+    "Volcano Number": 355130,
+    "Volcano Name": "Ojos del Salado, Nevados",
+    "Country": "Chile-Argentina",
+    "Volcanic Region Group": "South America Volcanic Regions",
+    "Volcanic Region": "Central Andean Volcanic Arc",
+    "Volcano Landform": "Composite",
+    "Primary Volcano Type": "Stratovolcano",
+    "Type Group": "Cone volcanoes",
+    "Type Description": "Tall, steep volcanoes often built by alternating lava and ash layers.",
+    "Activity Evidence": "Eruption Dated",
+    "Activity Class": "Dated eruption",
+    "Last Known Eruption": "750 CE",
+    "Eruption Year": 750.0,
+    "Eruption Period": "1-1499 CE",
+    "Elevation (m)": 6879,
+    "Elevation Class": "3,000 m and above",
+    "Tectonic Setting": "Subduction zone / Continental crust (>25 km)",
+    "Tectonic Group": "Subduction",
+    "Dominant Rock Type": "Dacite",
+    "Latitude": -27.109,
+    "Longitude": -68.541
+  },
+  "byType": {
+    "Cone volcanoes": 659,
+    "Volcanic fields": 138,
+    "Shield volcanoes": 110,
+    "Other or unknown": 80,
+    "Calderas": 78,
+    "Complex volcanoes": 55,
+    "Small cones": 37,
+    "Fissure vents": 33,
+    "Lava domes": 25
+  },
+  "byPeriod": {
+    "BCE record": 537,
+    "Since 1900": 438,
+    "1500-1899": 141,
+    "1-1499 CE": 99
+  },
+  "byTectonic": {
+    "Subduction": 839,
+    "Rift": 221,
+    "Intraplate": 149,
+    "Other setting": 6
+  }
+}

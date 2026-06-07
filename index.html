@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Global Holocene Volcanoes</title>
+    <link
+      rel="stylesheet"
+      href="vendor/leaflet/leaflet.css"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Map information and filters">
+        <header class="map-title">
+          <p class="eyebrow">Interactive thematic map</p>
+          <h1>Global Holocene Volcanoes</h1>
+          <p>
+            Explore where active and recently active volcanoes cluster, how their forms differ,
+            and why many follow plate boundaries.
+          </p>
+        </header>
+
+        <section class="stats" aria-label="Dataset summary">
+          <div>
+            <strong id="stat-total">1,215</strong>
+            <span>volcanoes</span>
+          </div>
+          <div>
+            <strong id="stat-countries">88</strong>
+            <span>countries</span>
+          </div>
+          <div>
+            <strong id="stat-recent">438</strong>
+            <span>since 1900</span>
+          </div>
+        </section>
+
+        <section class="control-group" aria-label="Filters">
+          <div class="section-head">
+            <h2>Filter the map</h2>
+            <button id="resetFilters" class="icon-button" type="button" title="Reset filters" aria-label="Reset filters">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12a9 9 0 1 0 3-6.7" />
+                <path d="M3 4v6h6" />
+              </svg>
+            </button>
+          </div>
+
+          <label for="typeFilter">Volcano form</label>
+          <select id="typeFilter">
+            <option value="All">All forms</option>
+          </select>
+
+          <label for="periodFilter">Last known eruption</label>
+          <select id="periodFilter">
+            <option value="All">All eruption periods</option>
+          </select>
+
+          <label for="tectonicFilter">Tectonic setting</label>
+          <select id="tectonicFilter">
+            <option value="All">All settings</option>
+          </select>
+
+          <label for="countrySearch">Find a country or volcano</label>
+          <input id="countrySearch" type="search" placeholder="Try Japan, Etna, Chile..." autocomplete="off" />
+        </section>
+
+        <section class="legend" aria-label="Legend">
+          <h2>Legend</h2>
+          <p class="legend-note">Color shows volcano form. Larger, brighter symbols have more recent eruption records.</p>
+          <div id="typeLegend" class="legend-list"></div>
+          <div class="period-scale">
+            <div class="period-symbol recent"></div>
+            <span>Since 1900</span>
+            <div class="period-symbol old"></div>
+            <span>Older or uncertain record</span>
+          </div>
+        </section>
+
+        <section class="learning-note">
+          <h2>Reading the pattern</h2>
+          <p>
+            Most mapped Holocene volcanoes occur in subduction zones. Students can compare the
+            Pacific arcs with rift and intraplate settings to see how plate motion shapes volcanic
+            landscapes.
+          </p>
+        </section>
+
+        <footer class="sources">
+          <p>
+            Data: Smithsonian Global Volcanism Program, Holocene Volcano List.
+            Map design rebuilt from the provided ArcGIS Online draft.
+          </p>
+        </footer>
+      </aside>
+
+      <main class="map-panel">
+        <div class="topbar">
+          <div>
+            <span id="resultCount">Loading volcanoes...</span>
+            <small id="activeHint">Use filters to compare patterns.</small>
+          </div>
+          <button id="fitWorld" class="text-button" type="button">Full extent</button>
+        </div>
+        <section class="famous-panel" aria-label="Famous volcano shortcuts">
+          <h2>Famous volcanoes</h2>
+          <div id="famousList" class="famous-list"></div>
+        </section>
+        <div id="map" aria-label="Map of global Holocene volcanoes"></div>
+      </main>
+    </div>
+
+    <script
+      src="vendor/leaflet/leaflet.js"
+    ></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
